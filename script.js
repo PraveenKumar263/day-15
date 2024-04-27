@@ -18,6 +18,11 @@ ele.append(inputdate, button);
 // Append the div to the body
 document.body.appendChild(ele);
 
+// Create a result div
+const resultDiv = document.createElement("div");
+resultDiv.innerHTML = "";
+resultDiv.className = "result";
+
 function get_date() {
   let input = document.getElementById("dob").value;
   let timestamp = Date.parse(input);
@@ -47,10 +52,7 @@ function get_date() {
 
   console.log(`Year difference: ${yeardiff}`);
   console.log(`Month difference: ${monthdiff}`);
-
-  // Create div elements for displaying the calculated differences
-  const resultDiv = document.createElement("div");
-  resultDiv.className = "result";
+  
   resultDiv.innerHTML = `
     <p>Year Difference: ${yeardiff}</p>
     <p>Month Difference: ${monthdiff}</p>
@@ -61,6 +63,5 @@ function get_date() {
     <p>Millisecond Difference: ${millisecdiff}</p>
   `;
 
-  // Append the result div to the main div
   ele.appendChild(resultDiv);
 }

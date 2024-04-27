@@ -11,3 +11,6 @@ button {
 .result {
     margin-bottom: 2px;
 }
+input{
+    width: 25%;
+}
